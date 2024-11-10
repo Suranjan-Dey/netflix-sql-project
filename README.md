@@ -83,8 +83,8 @@ Business Problem 4: Find the top 5 countries with the most content on Netflix
 
 ```sql
 SELECT
-		UNNEST(STRING_TO_ARRAY(country, ', ')) as country,
-		COUNT(*) as total_content
+	UNNEST(STRING_TO_ARRAY(country, ', ')) as country,
+	COUNT(*) as total_content
 	FROM netflix
 	GROUP BY 1
 ORDER BY 2 DESC
@@ -153,7 +153,7 @@ Business Problem 10: Find each year and the average numbers of content release b
 SELECT country, release_year, COUNT(show_id) as total_release,
 	ROUND(
 		COUNT(show_id)::numeric/
-								(SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100, 2
+					(SELECT COUNT(show_id) FROM netflix WHERE country = 'India')::numeric * 100, 2
 		)
 		as avg_release
 FROM netflix
