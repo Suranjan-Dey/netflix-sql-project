@@ -226,6 +226,6 @@ GROUP BY 1,2
 ORDER BY 2;
 ```
 
-**Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each
+**Objective:** Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise. Count the number of items in each category.
 
 - **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/suranjandey/)
